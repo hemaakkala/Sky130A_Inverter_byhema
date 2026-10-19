@@ -15,6 +15,7 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
 
  -[Chapter 0 - Setting up the Linux Environement](#chapter-0)
  -[Chapter 1 - Understanding the Design flow](#chapter-1)
+ -[Chapter 2 - Inverter creation](#chapter-2)
 
   ## SETTING UP THE LINUX ENVIRONMENT
 
@@ -196,7 +197,9 @@ Verifying Ngspice:
 
 Verifying Xschem(and added libraries)
 
-![Xschem]()
+![Xschem](Lab/xschem working.png)
+
+
 
 
 
