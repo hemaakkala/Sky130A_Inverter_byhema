@@ -64,7 +64,7 @@ Schematic Capture - Xschem
 _Make sure all the libraries that are necessary for all these below software are installed in your system. Also this would cost a lot of space as well so I suggest to get atleast 50GB of storage and atleast 8GB RAM._
 
 ## Magic
-![Magic image](Images1/magic.png)
+![Magic](Images1/magic.png)
 
 Magic is a VLSI layout tool.
 
@@ -77,6 +77,9 @@ $	 ./configure
 $  make
 $  sudo make install
 ```
+
+More info can be found at http://opencircuitdesign.com/magic/index.html
+
 
 ## Netgen
 ![netgen image](Images1/netgen.png)
@@ -93,6 +96,9 @@ $  make
 $  sudo make install
 ```
 
+More info can be found at http://opencircuitdesign.com/netgen/index.html
+
+
 ## Xschem
 ![xschem image](Images1/xschem.png)
 
@@ -106,6 +112,50 @@ $	./configure
 $  make
 $  sudo make install
 ```
+
+More info can be found at http://repo.hu/projects/xschem/index.html
+
+## Ngspice
+![ngspice](Images1/ngspice.png)
+
+Ngspice is the open source spice simulator for electric and electronic circuits. Ngspice is an open project, there is no closed group of developers.
+
+nstall steps:
+
+After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
+
+```bash
+ $ tar -zxvf ngspice-37.tar.gz
+ $ cd ngspice-37
+ $ mkdir release
+ $ cd release
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ $ make
+ $ sudo make install
+```
+More info can be found at https://ngspice.sourceforge.io/index.html
+
+Please note that to view the simulation graphs of ngspice, xterm is required and can be installed using.
+
+## PDK Setup
+![pdksetup](Images1/skywatertool.png)
+
+A process design kit (PDK) is a set of files used within the semiconductor industry to model a fabrication process for the design tools used to design an integrated circuit. The PDK is created by the foundry defining a certain technology variation for their processes. It is then passed to their customers to use in the design process.
+
+The PDK we are going to use for this BGR is Google Skywater-130 (130 nm) PDK.
+
+Steps to download PDK - Open the terminal and type the following to download sky130 PDK.
+
+```bash
+$  git clone https://github.com/RTimothyEdwards/open_pdks.git
+$  cd open_pdks
+$  ./configure [options]
+$  make
+$  [sudo] make install
+```
+
+
+
 
 
 
