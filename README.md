@@ -138,7 +138,7 @@ More info can be found at https://ngspice.sourceforge.io/index.html
 Please note that to view the simulation graphs of ngspice, xterm is required and can be installed using.
 
 ## PDK Setup
-![pdksetup](Images1/skywatertool.png)
+![pdksetup](Imgaes1/skywatertool.png)
 
 A process design kit (PDK) is a set of files used within the semiconductor industry to model a fabrication process for the design tools used to design an integrated circuit. The PDK is created by the foundry defining a certain technology variation for their processes. It is then passed to their customers to use in the design process.
 
