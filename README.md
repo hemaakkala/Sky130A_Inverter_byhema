@@ -67,6 +67,7 @@ _Make sure all the libraries that are necessary for all these below software are
 ![Magic image](Images1/magic.png)
 
 Magic is a VLSI layout tool.
+
 Install using:
 
 ```bash
@@ -78,9 +79,10 @@ $  sudo make install
 ```
 
 ## Netgen
-![netgen image](Image1/netgen.png)
+![netgen image](Images1/netgen.png)
 
 Netgen is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic". This is an important step in the integrated circuit design flow, ensuring that the geometry that has been laid out matches the expected circuit.
+
 Install using:
 
 ```bash
@@ -92,9 +94,10 @@ $  sudo make install
 ```
 
 ## Xschem
-![xschem image](Image1/xschem.png)
+![xschem image](Images1/xschem.png)
 
 Xschem is a schematic capture program that allows to interactively enter an electronic circuit using a graphical and easy to use interface. When the schematic has been created a circuit netlist can be generated for simulation.
+
 Install using:
 
 ```bash
