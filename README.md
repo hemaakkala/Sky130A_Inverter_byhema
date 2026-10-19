@@ -116,7 +116,7 @@ $  sudo make install
 More info can be found at http://repo.hu/projects/xschem/index.html
 
 ## Ngspice
-![ngspice](Images1/ngspice.png)
+![ngspice](Imgaes1/ngspice.png)
 
 Ngspice is the open source spice simulator for electric and electronic circuits. Ngspice is an open project, there is no closed group of developers.
 
