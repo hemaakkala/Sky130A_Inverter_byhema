@@ -45,4 +45,25 @@ $ sudo apt-get -y install libtool
 
 Now to set up the design lab, we first need to install the tools supported by the open source pdk
 
-  
+  ![toolchains image](toolchains.png)
+
+_Note: open_pdk has to be installed last so it can correctly associate the xschem and magic directories. Note: if the configure step fails during any process, its most likely due to missing additional packages, and they need to be installed (preferably from source) to complete the installation_
+
+## Tools Set-up
+
+For the design and simulation of our Inverter.
+
+Spice netlist simulation - Ngspice
+
+Layout Design and DRC - Magic
+
+LVS - Netgen
+
+Schematic Capture - Xschem
+
+_Make sure all the libraries that are necessary for all these below software are installed in your system. Also this would cost a lot of space as well so I suggest to get atleast 50GB of storage and atleast 8GB RAM._
+
+##Ngspice
+
+
+
