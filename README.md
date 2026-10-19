@@ -176,7 +176,9 @@ $ cd ../netgen
 $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 ```
 
+Setup and the welcome window of Linux OS (Ubuntu VM):
 
+![ubuntu]()
 
 
 
