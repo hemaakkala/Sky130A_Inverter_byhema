@@ -178,7 +178,11 @@ $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 
 Setup and the welcome window of Linux OS (Ubuntu VM):
 
-![ubuntu]()
+![ubuntu](Lab/VirtualBox_Ubuntu 24.04_13_10_2026_23_48_23 (welcome window).png)
+
+Checking tools,Magic:
+
+![magic]()
 
 
 
