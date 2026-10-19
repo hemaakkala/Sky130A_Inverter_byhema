@@ -184,7 +184,7 @@ _Note:The timestamps should be disregarded as the time zone settings were incorr
 
 Checking tools,Magic:
 
-![magic]()
+![Magic](Lab/MagicW.jpg)
 
 
 
