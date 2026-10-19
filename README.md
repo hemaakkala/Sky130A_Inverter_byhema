@@ -82,7 +82,7 @@ More info can be found at http://opencircuitdesign.com/magic/index.html
 
 
 ## Netgen
-![netgen image](Images1/netgen.png)
+![netgen image](Imgaes1/netgen.png)
 
 Netgen is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic". This is an important step in the integrated circuit design flow, ensuring that the geometry that has been laid out matches the expected circuit.
 
