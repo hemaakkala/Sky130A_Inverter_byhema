@@ -197,7 +197,7 @@ Verifying Ngspice:
 
 Verifying Xschem(and added libraries)
 
-![xschem working](Lab/xschem working.png)
+![xschem](Lab/xschemw.png)
 
 
 
