@@ -64,7 +64,7 @@ Schematic Capture - Xschem
 _Make sure all the libraries that are necessary for all these below software are installed in your system. Also this would cost a lot of space as well so I suggest to get atleast 50GB of storage and atleast 8GB RAM._
 
 ## Magic
-![Magic image](Magic.png)
+![Magic image](magic.png)
 
 Magic is a VLSI layout tool.
 
