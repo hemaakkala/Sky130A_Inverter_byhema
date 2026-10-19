@@ -190,7 +190,13 @@ Verifying Netgen:
 
 ![Netgen](Lab/NetgenW.jpg)
 
+Verifying Ngspice:
 
+![Ngspice](Lab/NgspiceW.jpg)
+
+Verifying Xschem(and added libraries)
+
+![Xschem]()
 
 
 
