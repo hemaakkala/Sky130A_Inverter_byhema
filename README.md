@@ -14,6 +14,7 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
 ## INDEX
 
  -[Chapter 0 - Setting up the Linux Environement](#chapter-0)
+ -[Chapter 1 - Understanding the Design flow](#chapter-1)
 
   ## SETTING UP THE LINUX ENVIRONMENT
 
@@ -153,6 +154,28 @@ $  ./configure [options]
 $  make
 $  [sudo] make install
 ```
+
+## Understanding the Design flow
+
+# Verifying the Open-PDKs 
+
+An initial working directory can be made by copying the required files as follows:
+
+```bash
+$ mkdir Lab1_and
+$ cd Lab1_and
+$ mkdir mag
+$ mkdir netgen
+$ mkdir xschem
+$ cd xschem
+$ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
+$ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+$ cd ../mag
+$ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+$ cd ../netgen
+$ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
+```
+
 
 
 
