@@ -100,7 +100,7 @@ More info can be found at http://opencircuitdesign.com/netgen/index.html
 
 
 ## Xschem
-![xschem image](Images1/xschem.png)
+![xschem image](Imgaes1/xschem.png)
 
 Xschem is a schematic capture program that allows to interactively enter an electronic circuit using a graphical and easy to use interface. When the schematic has been created a circuit netlist can be generated for simulation.
 
