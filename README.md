@@ -201,6 +201,13 @@ Verifying Xschem(and added libraries)
 
 ![xschem](Lab/xschemw.png)
 
+## Chapter-2 Inverter creation
+
+# Step-1: Creating Inverter schematic using Xschem tool
+
+The process includes choosing the MOSFETs for the design such as PMOS , NMOS. Inset these symbols from previously installed Sky130 libraries and make the inverter schematic
+
+!{inverter]()
 
 
 
