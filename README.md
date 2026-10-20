@@ -288,7 +288,8 @@ After completing the layout, we manually route the interconnections between the 
 ![magical](lab2/magical.png)
 
 ## Chapter-4 LVS: Comparing the Extracted Layout Netlist with the Schematic Netlist
-Lastly we save and export the netlist for final verification
+Lastly we save and export the netlist for final verification, in the console we can see the netlist is being extracted:
 
 ![extraction](lab2/extraction.jpg)
 
+Finally comparison:
