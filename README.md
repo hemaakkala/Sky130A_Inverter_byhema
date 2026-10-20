@@ -215,6 +215,10 @@ Configuring transistor properties in Xschem to define their dimensions and param
 
 Creating a symbol out of the drawn schematic 
 
-![symboll1](lab1/symboll1.png)
+![sumboll1](lab1/sumboll1.png)
+
+Using the generated symbol, writing a test bench with set voltage values and SPICE code_shown blocks used for analysis in V(in) V(out) graph 
+
+![testbenchl1](lab1/testbenchl1.png)
 
 
