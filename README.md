@@ -247,5 +247,10 @@ For the other transistor pFET:
 ![magicp2](lab2/magicp2.png)
 
 After this, I resolved the issue of missing pins by manually placing pins using ***metal1*** layer , placed labels on the pins and explicitly telling the software to treat them as in, out, vdd, vss pins so the circuit passes its final checks.
+The pins looked like:
 
+![manual](lab2/manual.png)
 
+After completing the layout, we manually route the interconnections between the transistors, ensuring that the layout satisfies all applicable Design Rule Checks (DRC) with **zero DRC violations**.
+
+![magical](lab2/magical.png)
