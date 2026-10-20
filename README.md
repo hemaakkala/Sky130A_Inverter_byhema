@@ -288,4 +288,5 @@ After completing the layout, we manually route the interconnections between the 
 
 Lastly we save and export the netlist for final verification
 
-![]()
+![extraction](lab2/extraction.jpg)
+
