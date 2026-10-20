@@ -165,18 +165,17 @@ $  [sudo] make install
 An initial working directory can be made by copying the required files as follows:
 
 ```bash
-$ mkdir Lab1_and
-$ cd Lab1_and
+$ cd
+$ mkdir inverter_fresh
+$ cd inverter_fresh
 $ mkdir mag
 $ mkdir netgen
-$ mkdir xschem
-$ cd xschem
 $ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
 $ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
-$ cd ../mag
+$ cd mag
 $ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 $ cd ../netgen
-$ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
+$ cp /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl .
 ```
 
 ***Note: Due to technical issues from my side (my laptop) I couldn't download the latest version of Ubuntu (used an older version 24.04), even after that I had errors piling up with the device specifications during designing  ,so I couldn't follow the exact specifications mentioned in the lectures by sir Tim , so these outputs may vary accordingly.***
@@ -303,6 +302,7 @@ The Magic's Layout SPICE netlist is obtained using
 To avoid excess files we use :
 
 ```bash
+$ cd ~/inverter_fresh
 $ rm *.ext
 $ /usr/local/share/pdk/scripts/cleanup_unref.py -remove
 ```
@@ -312,4 +312,4 @@ netgen-lvs -batch lvs "../inverter_fresh.spice inverter_fresh" "inverter_fresh_s
 ```
 
 Meanwhile the output turns out to be a Mismatch 
-![netliste]()
+![netliste](lab3/netliste.png)
