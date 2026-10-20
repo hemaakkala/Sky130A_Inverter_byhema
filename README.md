@@ -317,4 +317,7 @@ netgen-lvs -batch lvs "../inverter_magic.spice inverter_fresh" "inverter_fresh.s
 ```
 
 Meanwhile the output turns out to be a Mismatch 
-![netliste](lab3/netliste.png)
+![LVSm](lab3/LVSm.png)
+
+**Concluding**
+My LVS ended in a mismatch. Netgen counted [5] nets in my layout and [4] in my schematic. Which means I hadn’t tied the transistor bodies to vdd and vss with metal, so Netgen saw them as separate nets. Also, the transistor sizes in the lecture gave an error in Ngspice 42 on my VM, so I used smaller sizes (nf=1). That may have left my layout and schematic slightly different too.
