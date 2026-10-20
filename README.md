@@ -19,7 +19,7 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
  
  -[Chapter 2 - Inverter creation](#chapter-2)
 
-  ## SETTING UP THE LINUX ENVIRONMENT
+  ## Chapter-0 Setting Up the Linux Environment
 
   ->To be able to operate with the design tools, we need a working Linux environment.
   
@@ -158,7 +158,7 @@ $  make
 $  [sudo] make install
 ```
 
-## Understanding the Design flow
+##  CHapter-1 Understanding the Design flow
 
 # Verifying the Open-PDKs 
 
