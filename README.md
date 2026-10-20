@@ -209,6 +209,12 @@ The process includes choosing the MOSFETs for the design such as PMOS , NMOS. In
 
 ![inverterl1](lab1/inverterl1.png)
 
+Configuring transistor properties in Xschem to define their dimensions and parameters for Inverter design 
 
+![properties](lab1/properties.png)
+
+Creating a symbol out of the drawn schematic 
+
+![symboll1](lab1/symboll1.png)
 
 
