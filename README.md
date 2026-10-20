@@ -16,6 +16,7 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
 - [Chapter-0 Setting Up the Linux Environment](#chapter-0-setting-up-the-linux-environment)
 - [Chapter-1 Understanding the Design flow](#chapter-1-understanding-the-design-flow)
 - [Chapter-2 Inverter creation](#chapter-2-inverter-creation)
+- [Chapter-3 Import, Layout and exporting its netlist](#chapter-3-import-layout-and-exporting-its-netlist)
 
   ## Chapter-0 Setting Up the Linux Environment
 
@@ -231,5 +232,12 @@ The process includes generating Netlist of said testbench
 After successful generation of Netlist, we can stimulate it , which might look like 
 
 ![scheml1](lab1/scheml1.jpg)
+
+## Chapter-3 Import, Layout and exporting its netlist
+
+Upon completion and verification of schematic , we jump into making the layout of our Inverter. For this errand we use Magic Layout tool, we Import the SPICE netlist into magic tool and start connecting it manually with metal1.
+As you can see my Layout is missing pins - 'in', 'out', 'vdd'. 'vss' even though we successfully made a schematic and stimulated it with a testbench, this is due to some reasons (Layout Interconnection issue) scripting mismatch during setup of tools and Linux caused missing pins.
+
+
 
 
