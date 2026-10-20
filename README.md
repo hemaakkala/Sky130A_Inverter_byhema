@@ -287,9 +287,29 @@ After completing the layout, we manually route the interconnections between the 
 
 ![magical](lab2/magical.png)
 
-## Chapter-4 LVS: Comparing the Extracted Layout Netlist with the Schematic Netlist
 Lastly we save and export the netlist for final verification, in the console we can see the netlist is being extracted:
 
 ![extraction](lab2/extraction.jpg)
 
-Finally comparison:
+## Chapter-4 LVS: Comparing the Extracted Layout Netlist with the Schematic Netlist
+
+The Magic's Layout SPICE netlist is obtained using 
+```bash
+% extract do local
+% extract all
+% ext2spice lvs
+% ext2spice
+```
+To avoid excess files we use :
+
+```bash
+$ rm *.ext
+$ /usr/local/share/pdk/scripts/cleanup_unref.py -remove
+```
+The schematic netlist and layout netlist is compared using LVS by Netgen:
+```bash
+netgen-lvs -batch lvs "../inverter_fresh.spice inverter_fresh" "inverter_fresh_sch.spice inverter_fresh" setup.tcl comp.out
+```
+
+Meanwhile the output turns out to be a Mismatch 
+![netliste]()
