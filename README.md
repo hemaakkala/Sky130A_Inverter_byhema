@@ -17,6 +17,7 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
 - [Chapter-1 Understanding the Design flow](#chapter-1-understanding-the-design-flow)
 - [Chapter-2 Inverter creation](#chapter-2-inverter-creation)
 - [Chapter-3 Import, Layout and exporting its netlist](#chapter-3-import-layout-and-exporting-its-netlist)
+- [Chapter-4 LVS: Comparing the Extracted Layout Netlist with the Schematic Netlist](#chapter-4-lvs-comparing-the-extracted-layout-netlist-with-the-schematic-netlist)
 
   ## Chapter-0 Setting Up the Linux Environment
 
@@ -286,6 +287,7 @@ After completing the layout, we manually route the interconnections between the 
 
 ![magical](lab2/magical.png)
 
+## Chapter-4 LVS: Comparing the Extracted Layout Netlist with the Schematic Netlist
 Lastly we save and export the netlist for final verification
 
 ![extraction](lab2/extraction.jpg)
