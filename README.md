@@ -252,9 +252,9 @@ For the other transistor pFET:
 ![magicp2](lab2/magicp2.png)
 
 After this, I resolved the issue of missing pins by manually placing pins using ***metal1*** layer , placed labels on the pins and explicitly telling the software to treat them as in, out, vdd, vss pins so the circuit passes its final checks.
-The pins looked like:
+The pins looked like:(_Note: The picture showing all pins placed manually is tagged at the end_) 
 
-![manual](lab2/manual.png)
+![inlabel](lab2/inlabel.png)
 
 Pins are declared as following:
 
@@ -321,3 +321,9 @@ Meanwhile the output turns out to be a Mismatch
 
 **Concluding**
 My LVS ended in a mismatch. Netgen counted [5] nets in my layout and [4] in my schematic. Which means I hadn’t tied the transistor bodies to vdd and vss with metal, so Netgen saw them as separate nets. Also, the transistor sizes in the lecture gave an error in Ngspice 42 on my VM, so I used smaller sizes (nf=1). That may have left my layout and schematic slightly different too.
+
+## Additional images
+
+All pins placed and declared manually:
+
+![manual](lab2/manual.png)
