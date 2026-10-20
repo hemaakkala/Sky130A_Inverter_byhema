@@ -236,7 +236,7 @@ After successful generation of Netlist, we can stimulate it , which might look l
 ## Chapter-3 Import, Layout and exporting its netlist
 
 Upon completion and verification of schematic , we jump into making the layout of our Inverter. For this errand we use Magic Layout tool, we Import the SPICE netlist into magic tool and start connecting it manually with metal1.
-As you can see my Layout is missing pins - 'in', 'out', 'vdd'. 'vss' even though we successfully made a schematic and stimulated it with a testbench, this is due to some reasons (Layout Interconnection issue) scripting mismatch during setup of tools and Linux caused missing pins.
+As you can see my Layout is missing pins - 'in', 'out', 'vdd'. 'vss' even though we successfully made a schematic and stimulated it with a testbench, this is due to some reasons (maybe Layout Interconnection issue) scripting mismatch during setup of tools and Linux caused missing pins.
 
 Later, I found out this is a frequent so I went on with layout process with changing transistor specification to our priority: For nFET
 
@@ -251,6 +251,40 @@ The pins looked like:
 
 ![manual](lab2/manual.png)
 
+Pins are declared as following:
+
+For **Input (in)** pin
+```dash
+$ label in north m1
+$ port make
+$ port class input
+$ port use signal
+```
+For **Output (out)** pin 
+```dash
+$ label out north m1
+$ port make
+$ port class output
+$ port use signal
+```
+For **Power (vdd)** pin 
+```dash
+$ label vdd north m1
+$ port make
+$ port class bidirectional
+$ port use power
+```
+For **Ground(vss)** pin
+```dash
+$ label vss north m1
+$ port make
+$ port class bidirectional
+$ port use ground
+
 After completing the layout, we manually route the interconnections between the transistors, ensuring that the layout satisfies all applicable Design Rule Checks (DRC) with **zero DRC violations**.
 
 ![magical](lab2/magical.png)
+
+Lastly we save and export the netlist for final verification
+
+![]()
