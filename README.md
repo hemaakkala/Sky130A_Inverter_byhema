@@ -219,6 +219,9 @@ Creating a symbol out of the drawn schematic
 
 Using the generated symbol, writing a test bench with set voltage values and SPICE code_shown blocks used for analysis in V(in) V(out) graph 
 
-![testbenchl1](lab1/testbenchl1.png)
+![testb](lab1/testb.png)
 
+# Simulating the TestBench Schematic
+
+The process includes generating Netlist of said testbench 
 
