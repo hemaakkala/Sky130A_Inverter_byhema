@@ -207,7 +207,7 @@ Verifying Xschem(and added libraries)
 
 The process includes choosing the MOSFETs for the design such as PMOS , NMOS. Inset these symbols from previously installed Sky130 libraries and make the inverter schematic
 
-!{inverter]()
+![inverterl1](lab1/inverterl1.png)
 
 
 
