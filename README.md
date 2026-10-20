@@ -280,6 +280,7 @@ $ label vss north m1
 $ port make
 $ port class bidirectional
 $ port use ground
+```
 
 After completing the layout, we manually route the interconnections between the transistors, ensuring that the layout satisfies all applicable Design Rule Checks (DRC) with **zero DRC violations**.
 
