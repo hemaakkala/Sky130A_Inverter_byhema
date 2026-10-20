@@ -14,7 +14,9 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
 ## INDEX
 
  -[Chapter 0 - Setting up the Linux Environement](#chapter-0)
+ 
  -[Chapter 1 - Understanding the Design flow](#chapter-1)
+ 
  -[Chapter 2 - Inverter creation](#chapter-2)
 
   ## SETTING UP THE LINUX ENVIRONMENT
