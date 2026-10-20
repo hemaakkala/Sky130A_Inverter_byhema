@@ -217,7 +217,8 @@ Creating a symbol out of the drawn schematic
 
 ![sumboll1](lab1/sumboll1.png)
 
-Using the generated symbol, writing a test bench with set voltage values and SPICE code_shown blocks used for analysis in V(in) V(out) graph 
+Using the generated symbol, writing a test bench with set voltage values and SPICE code_shown blocks used for analysis 
+in V(in) V(out) graph 
 
 ![testb](lab1/testb.png)
 
@@ -225,3 +226,8 @@ Using the generated symbol, writing a test bench with set voltage values and SPI
 
 The process includes generating Netlist of said testbench 
 
+![netliste](lab1/netliste.png)
+
+After successful generation of Netlist, we can stimulate it , which might look like 
+
+![simulate]()
