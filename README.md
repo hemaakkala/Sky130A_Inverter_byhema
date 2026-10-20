@@ -5,7 +5,7 @@ This repository contains documentation, code snippets and supporting photos capt
 
 This repo explains, the steps followed and errors faced during the physical verification of a CMOS inverter using Open-pdk tools. The verification is mainly carried out by Skywater 130 nm tech, including drawing schematics, layouts, DRC checks ,LVS etc. Continue reading to understand the procedure.
 
-A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions for this chance.
+A Special thanks to Tim, Kunal, Anagha Ghosh and participating institutions for this chance.
 
 [R Timothy Edwards](https://github.com/RTimothyEdwards) 
 
@@ -26,9 +26,9 @@ A Special thanks to Tim, Kunal and Anagha Ghosh and participating institutions f
   ->To host that working Linux OS, firstly we need a medium to handle this. For this project we opted Virtual Box by Oracle 
   Learn more at [VirtualBox](https://www.virtualbox.org/)
   
-  -> For the working Linux OS , download Ubuntu (latest version) at [Ubuntu ISO](https://ubuntu.com/)
+  -> For the working Linux OS , download Ubuntu at [Ubuntu ISO](https://ubuntu.com/)
 
-  ->Create the Virtual Machine with certain specifications that support all the necessary tools
+  ->Create the Virtual Machine with specifications that support all the necessary tools
 
  ```bash
 $ sudo apt-get update
@@ -124,13 +124,13 @@ More info can be found at http://repo.hu/projects/xschem/index.html
 
 Ngspice is the open source spice simulator for electric and electronic circuits. Ngspice is an open project, there is no closed group of developers.
 
-nstall steps:
+Install steps:
 
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
 
 ```bash
- $ tar -zxvf ngspice-37.tar.gz
- $ cd ngspice-37
+ $ tar -zxvf ngspice-42.tar.gz
+ $ cd ngspice-42
  $ mkdir release
  $ cd release
  $ ../configure  --with-x --with-readline=yes --disable-debug
@@ -140,13 +140,16 @@ After downloading the tarball from https://sourceforge.net/projects/ngspice/file
 More info can be found at https://ngspice.sourceforge.io/index.html
 
 Please note that to view the simulation graphs of ngspice, xterm is required and can be installed using.
+```bash
+sudo apt-get install xterm
+```
 
 ## PDK Setup
 ![pdksetup](Imgaes1/skywatertool.png)
 
 A process design kit (PDK) is a set of files used within the semiconductor industry to model a fabrication process for the design tools used to design an integrated circuit. The PDK is created by the foundry defining a certain technology variation for their processes. It is then passed to their customers to use in the design process.
 
-The PDK we are going to use for this BGR is Google Skywater-130 (130 nm) PDK.
+The PDK we are going to use for this Inverter is Google Skywater-130 (130 nm) PDK.
 
 Steps to download PDK - Open the terminal and type the following to download sky130 PDK.
 
@@ -168,14 +171,16 @@ An initial working directory can be made by copying the required files as follow
 $ cd
 $ mkdir inverter_fresh
 $ cd inverter_fresh
+$ mkdir xschem
 $ mkdir mag
 $ mkdir netgen
-$ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
-$ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
-$ cd mag
-$ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+$ cd xschem
+$ ln -s /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc xschemrc
+$ ln -s /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+$ cd ../mag
+$ ln -s /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 $ cd ../netgen
-$ cp /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl .
+$ ln -s /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
 ```
 
 ***Note: Due to technical issues from my side (my laptop) I couldn't download the latest version of Ubuntu (used an older version 24.04), even after that I had errors piling up with the device specifications during designing  ,so I couldn't follow the exact specifications mentioned in the lectures by sir Tim , so these outputs may vary accordingly.***
@@ -236,7 +241,7 @@ After successful generation of Netlist, we can stimulate it , which might look l
 ## Chapter-3 Import, Layout and exporting its netlist
 
 Upon completion and verification of schematic , we jump into making the layout of our Inverter. For this errand we use Magic Layout tool, we Import the SPICE netlist into magic tool and start connecting it manually with metal1.
-As you can see my Layout is missing pins - 'in', 'out', 'vdd'. 'vss' even though we successfully made a schematic and stimulated it with a testbench, this is due to some reasons (maybe Layout Interconnection issue) scripting mismatch during setup of tools and Linux caused missing pins.
+As you can see my Layout is missing pins - 'in', 'out', 'vdd'. 'vss' even though we successfully made a schematic and stimulated it with a testbench, this is due to some reasons (maybe Layout Interconnection issue) scripting mismatch during setup of tools and Linux caused missing pins._Note:Final Layout cell is inverter_fresh_
 
 Later, I found out this is a frequent so I went on with layout process with changing transistor specification to our priority: For nFET
 
@@ -308,7 +313,7 @@ $ /usr/local/share/pdk/scripts/cleanup_unref.py -remove
 ```
 The schematic netlist and layout netlist is compared using LVS by Netgen:
 ```bash
-netgen-lvs -batch lvs "../inverter_fresh.spice inverter_fresh" "inverter_fresh_sch.spice inverter_fresh" setup.tcl comp.out
+netgen-lvs -batch lvs "../inverter_magic.spice inverter_fresh" "inverter_fresh.spice inverter_fresh" setup.tcl comp.out
 ```
 
 Meanwhile the output turns out to be a Mismatch 
