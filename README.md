@@ -230,4 +230,6 @@ The process includes generating Netlist of said testbench
 
 After successful generation of Netlist, we can stimulate it , which might look like 
 
-![simulate]()
+![scheml1](lab1/scheml1.jpg)
+
+
